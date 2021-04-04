@@ -1,0 +1,42 @@
+// Partly based on Josh's cool ideas here:
+// https://www.joshwcomeau.com/animation/3d-button/
+.button {
+  border: 2px solid;
+  background: hsl(114deg 27% 75%);
+  background-color: currentColor;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  min-width: 150px;
+
+  svg {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+  }
+
+  span {
+    display: block;  
+    transform: translate(-2px, -4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1); 
+    border: 1px solid;
+    background: var(--secondary-color);
+    padding: calc(var(--space) * 1.5);
+    padding-bottom: var(--space);
+  }
+
+  &:hover span {
+    transform: translate(-2px, -6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    filter: brightness(105%);    
+  }
+
+  &:active span {
+    transform: translate(-2px, -2px);
+    transition: transform 34ms;
+  }
+
+  @media (min-width: 500px) {
+    width: auto;
+  }
+}

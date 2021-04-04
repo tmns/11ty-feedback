@@ -1,0 +1,33 @@
+<form name="feedback-form" class="wrapper" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+  <p class="visually-hidden">
+    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  </p>
+
+  {% for item in goals %}
+  <div class="box with-goal-number with-drop-shadow" style="--goal-index: {{loop.index}}">
+    <h2 class="visually-hidden">Goal {{loop.index}}</h2>
+    <p>{{ item.goal | safe }}</p>
+    
+    {% if item.selfEval %}
+    <details>
+      <summary>What am I doing to work towards this goal?</summary>
+      <p>{{ item.selfEval | safe }}</p>
+    </details>
+    {% endif %}
+
+    <label for="goal-{{loop.index}}">
+      How do you feel I'm doing with regard to goal {{loop.index}}?
+    </label>
+    <textarea type="textarea" name="goal-{{loop.index}}" id="goal-{{loop.index}}" required></textarea>
+  </div>
+  {% endfor %}
+
+  <div class="box with-drop-shadow">
+    <label for="name">Finally, if you'd like, jot your name down before submitting:</label>
+    <input type="text" name="name" id="name">  
+  </div>
+
+  <button type="submit" class="button">
+    <span><svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14.5.5l.46.197a.5.5 0 00-.657-.657L14.5.5zm-14 6l-.197-.46a.5.5 0 00-.06.889L.5 6.5zm8 8l-.429.257a.5.5 0 00.889-.06L8.5 14.5zM14.303.04l-14 6 .394.92 14-6-.394-.92zM.243 6.93l5 3 .514-.858-5-3-.514.858zM5.07 9.757l3 5 .858-.514-3-5-.858.514zm3.889 4.94l6-14-.92-.394-6 14 .92.394zM14.146.147l-9 9 .708.707 9-9-.708-.708z" fill="currentColor"></path></svg>Submit</span>
+  </button>
+</form>

@@ -1,0 +1,24 @@
+.box {
+  border: 1px dashed;
+  background-color: var(--secondary-color);
+  padding: calc(var(--space) * 3);
+
+  p,
+  details {
+    margin-top: calc(var(--space) * 1.7);
+  }
+
+  summary {
+    cursor: pointer;
+  }
+
+  summary + p,
+  li {
+    margin-top: var(--space);
+  }
+
+  h1 + details,
+  label:not(:first-child) {
+    margin-top: calc(var(--space) * 2);
+  }
+}

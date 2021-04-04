@@ -1,0 +1,35 @@
+form {
+  margin-top: calc(var(--space) * 5);
+
+  * + * {
+    margin-top: calc(var(--space) * 5);
+  }
+
+  label {
+    display: block;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    margin-top: var(--space);
+    border: 1px solid;
+    background-color: #fff;
+    padding: var(--space);
+    width: 100%;
+  }
+
+  p + label {
+    margin-top: calc(var(--space) * 1.5);
+  }
+
+  textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+}
+
+@import 'blocks/button';
+
+@import 'utilities/with-goal-number';
+@import 'utilities/with-drop-shadow';
