@@ -1,0 +1,32 @@
+{
+  "name": "11ty-feedback",
+  "version": "1.0.0",
+  "description": "An 11ty starter project for receiving meaningful feedback.",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "feedback",
+    "template",
+    "starter",
+    "project"
+  ],
+  "author": "tmns",
+  "license": "WTFPL",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "concurrently": "^5.3.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^2.0.0",
+    "html-minifier": "^4.0.0",
+    "sass": "^1.30.0",
+    "terser": "^5.5.1"
+  }
+}
