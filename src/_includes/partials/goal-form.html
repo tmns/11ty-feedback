@@ -1,6 +1,6 @@
 <form name="feedback-form" class="wrapper" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-  <p class="visually-hidden">
-    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  <p class="visually-hidden" aria-hidden="true">
+    <label>Don’t fill this out if you’re human: <input name="bot-field" tabindex="-1" /></label>
   </p>
 
   {% for item in goals %}
