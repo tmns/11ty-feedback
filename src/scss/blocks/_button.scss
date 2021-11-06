@@ -1,9 +1,9 @@
 // Partly based on Josh's cool ideas here:
 // https://www.joshwcomeau.com/animation/3d-button/
 .button {
-  border: 2px solid;
-  background: hsl(114deg 27% 75%);
-  background-color: currentColor;
+  --border-color: #000;
+  border: 2px solid var(--border-color);
+  background: var(--border-color);
   cursor: pointer;
   padding: 0;
   width: 100%;
@@ -23,6 +23,7 @@
     background: var(--secondary-color);
     padding: calc(var(--space) * 1.5);
     padding-bottom: var(--space);
+    color: var(--tertiary-color);
   }
 
   &:hover span {
