@@ -18,15 +18,15 @@
   "author": "tmns",
   "license": "WTFPL",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "concurrently": "^5.3.0",
+    "@11ty/eleventy": "^2.0.0",
+    "concurrently": "^7.6.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-flatten": "^0.4.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-terser": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
     "html-minifier": "^4.0.0",
-    "sass": "^1.30.0",
-    "terser": "^5.5.1"
+    "sass": "^1.58.3",
+    "terser": "^5.16.5"
   }
 }
